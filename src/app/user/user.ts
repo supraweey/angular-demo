@@ -1,5 +1,6 @@
 import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { UserModel } from './user.model';
+import { Card } from "../shared/card/card";
 
 // type User {
 //   id: string;
@@ -11,6 +12,7 @@ import { UserModel } from './user.model';
   selector: 'app-user',
   templateUrl: './user.html',
   styleUrl: './user.css',
+  imports: [Card],
 })
 export class User {
   @Input({required: true}) user!: UserModel;
